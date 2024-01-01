@@ -1,9 +1,10 @@
+require('dotenv').config();
 const config = {
     db: {
-      host: "localhost",
-      user: "root",
-      password: "",
-      database: "todo_app",
+      host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_DATABASE || 'todo_app',
     },
     
 
